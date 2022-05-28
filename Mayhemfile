@@ -1,5 +1,5 @@
 project: rnshah9/thtk
-target: thtk
+target: thmsg
 
 cmds:
   - cmd: /repo/build/thmsg/thmsg -c 6 @@
