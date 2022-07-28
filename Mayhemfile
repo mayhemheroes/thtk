@@ -2,4 +2,4 @@ project: thtk
 target: thmsg
 
 cmds:
-  - cmd: /repo/build/thmsg/thmsg -c 6 @@
+  - cmd: /install/bin/thmsg -c 6 @@
