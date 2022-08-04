@@ -29,7 +29,6 @@
 #ifndef THLZSS_H_
 #define THLZSS_H_
 
-#include <config.h>
 #ifdef HAVE_SYS_TYPES_H
 #include <sys/types.h>
 #endif
@@ -39,13 +38,13 @@
 extern "C" {
 #endif
 
-API_SYMBOL ssize_t th_lzss(
+THTK_EXPORT ssize_t th_lzss(
     thtk_io_t* input,
     size_t input_size,
     thtk_io_t* output,
     thtk_error_t** error);
 
-API_SYMBOL ssize_t th_unlzss(
+THTK_EXPORT ssize_t th_unlzss(
     thtk_io_t* input,
     thtk_io_t* output,
     size_t output_size,
