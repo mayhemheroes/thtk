@@ -8,8 +8,8 @@ WORKDIR /repo/build
 RUN cmake .. -DCMAKE_INSTALL_PREFIX=/install
 RUN make -j8
 RUN make install
-RUN clang++ /repo/mayhem/fuzz.cpp -fsanitize=fuzzer,address /repo/build/util/libutil.a  -o /fuzz
+RUN clang++ /repo/mayhem/fuzz_value_from_text.cpp -fsanitize=fuzzer,address /repo/build/util/libutil.a  -o /fuzz
 
 FROM ubuntu:22.04 as package
 COPY --from=builder /install /install
-COPY --from=builder /fuzz /fuzz
+COPY --from=builder /fuzz /fuzz_value_from_text
