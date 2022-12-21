@@ -1,0 +1,8 @@
+project: thtk
+target: value-from-text
+
+cmds:
+  - cmd: /fuzz_value_from_text
+    libfuzzer: true
+    env:
+      ASAN_OPTIONS: detect_leaks=0

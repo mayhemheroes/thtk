@@ -1,0 +1,5 @@
+project: thtk
+target: thmsg
+
+cmds:
+  - cmd: /install/bin/thmsg -c 6 @@
